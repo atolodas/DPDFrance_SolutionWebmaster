@@ -1,4 +1,4 @@
-<h1>DPD shipping solution for Webmasters (France vendors only)</h1>
+<h1>DPD France shipping solution for Webmasters (France vendors only)</h1>
 
 <h2>English (Français ci-dessous)</h2>
 
@@ -20,14 +20,14 @@
 	<li>The <strong>PHP SOAP</strong> extension must be active on your server.</li>
 </ul>
 
-<p>For technical support, or to become an DPD customer, please <a href="http://www.dpd.fr/nousconnaitre/nouscontacter">contact us</a>.</p>
+<p>For technical support, or to become an DPD customer, please <a href="http://www.dpd.fr/nous_contacter">contact us</a>.</p>
 
 <hr/>
 
 <h2>Français</h2>
 
 <p><strong>En choisissant DPD, bénéficiez de solutions de livraison innovantes : à domicile sur rendez-vous avec notre offre Predict, vers plus de 5 000 relais Pickup avec DPD Relais, sur lieu de travail avec DPD CLASSIC, et dans le monde entier avec les services DPD CLASSIC Europe & Intercontinental.</strong></p>
-<p>La <strong>solution pour Webmaster de DPD</strong> vous permet de développer votre propre module de livraison pour votre site marchand avec de grandes fonctionnalités :</p>
+<p>La <strong>solution pour Webmaster de DPD France</strong> vous permet de développer votre propre module de livraison pour votre site marchand avec de grandes fonctionnalités :</p>
 
 <h3>Fonctionnement en front-office</h3>
 
@@ -44,4 +44,4 @@
 	<li>Activer l’extension <strong>PHP SOAP</strong> sur votre serveur</li>
 </ul>
 
-<p>Pour toute question technique, ou pour devenir client DPD : <a href="http://www.dpd.fr/nousconnaitre/nouscontacter">contactez-nous</a>.</p>
+<p>Pour toute question technique, ou pour devenir client DPD : <a href="http://www.dpd.fr/nous_contacter">contactez-nous</a>.</p>
