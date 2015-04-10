@@ -1,3 +1,15 @@
+@font-face
+{
+	font-family:DPDPlutoSansLight;
+	src:url(../fonts/PlutoSansDPDLight-Web.ttf);
+}
+
+@font-face
+{
+	font-family:DPDPlutoSansRegular;
+	src:url(../fonts/PlutoSansDPDRegular-Web.ttf);
+}
+
 .listepr {
 	float:left;
 	display: inline-block;
@@ -5,7 +17,7 @@
 
 .lignepr {
     background-color: #fff;
-    color: #000000;
+    color: #424143;
     height: 50px;
 }
 
@@ -15,42 +27,44 @@
 
 
 #dpdrelais_logo img {
-    height: 48px;
-    margin: 0px;
+    height: 45px;
     float: left;
-    width: 48px;
+    width: 45px;
 }
 
 .dpdrelais_info {
     float: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 4px 10px;
 	text-transform: uppercase;
 }
-
-#s2 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 20px;
+.dpdrelais_popup {
+    margin: 16px 10px;
     float: right;
-    width: 80px;
     text-align: right;
-	line-height: 20px;
 }
-#s3 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 20px;
+div.dpdrelais_popup a {
+    color: #424143;
+	text-decoration: none;
+}
+div.dpdrelais_popup a:hover{
+    color: #dc0032;
+	text-decoration: underline;
+}
+.dpdrelais_distance {
+    margin: 10px 10px;
     float: right;
-    width: 80px;
     text-align: right;
-	line-height: 20px;
+
+}
+.dpdrelais_radio {
+    margin: 12px 20px;
+    float: right;
+    text-align: right;
+
 }
 #dpdfrance_pickup {
     font-weight: normal;
-    font-family: Arial;
+    font-family: DPDPlutoSansLight;
     font-size: 11px;
 }
 
@@ -58,7 +72,7 @@ div.lignepr {
     border-color: #424143;
 	border-style: solid;
 	border-width: 0px 0px 1px 0px;
-    margin-top: 5px;
+    margin: 5px 0px;
 }
 div.lignepr:nth-child(9)
 {

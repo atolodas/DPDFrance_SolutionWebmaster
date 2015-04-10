@@ -22,31 +22,30 @@ if ($run_example == 1)
 {
 	$relais_list = DPDFrance::getPickupPoints('27 Rue du colonel pierre avia', '75015', 'Paris');
 
-	$html = '<link rel="stylesheet" type="text/css" href="assets/css/dpdrelais.css" media="screen" /><div id="dpdfrance_pickup">';
+	/* Build display: call CSS and create div */
+	$html = '<link rel="stylesheet" type="text/css" href="assets/css/dpdrelais.css" media="screen"/>
+			 <div id="dpdfrance_pickup">';
+	
+	/* Write each Pickup point */
 	foreach ($relais_list as $offset => $pointRelais)
 	{
 		$html .= '
-		<div class="lignepr" id="lignepr'.$offset.'">
-			<span id="s3"><input type="radio" name="dpdfrance_pickup" value="'.$pointRelais['relay_id'].'"></input></span>
-			<span class"dpdrelais_logo" id="dpdrelais_logo"><img src="assets/img/pointrelais.png" alt="-" /></span>
-			<span class="dpdrelais_info" id="dpdrelais'.$offset.'_info"><strong>' . $pointRelais['shop_name'] . '</strong><br/>' . $pointRelais['address1'] . ' <br/> ' . $pointRelais['zipcode'] . ' ' . $pointRelais['city'] . '</span>
-			<span id="s2">' . sprintf ( "%01.1f", (int)$pointRelais['distance']) . ' km  <br/> ID: ' . $pointRelais['relay_id'] . '</span>
-		</div>
+			<label>
+				<div class="lignepr" id="lignepr'.$offset.'">
+					<div class"dpdrelais_logo" id="dpdrelais_logo"><img src="assets/img/pointrelais.png" alt="-" /></div>
+					<div class="dpdrelais_info" id="dpdrelais'.$offset.'_info"><strong>' . $pointRelais['shop_name'] . '</strong><br/>' . $pointRelais['address1'] . ' <br/> ' . $pointRelais['zipcode'] . ' ' . $pointRelais['city'] . '</div>
+					<div class="dpdrelais_radio"><input type="radio" name="dpdfrance_pickup" value="'.$pointRelais['relay_id'].'"></input></div>
+					<div class="dpdrelais_popup"><a href="http://www.dpd.fr/dpdrelais/id_'.$pointRelais['relay_id'].'" target="_blank">Plus de détails</a></div>
+					<div class="dpdrelais_distance">' . $pointRelais['distance'] . ' km  <br/> ID: ' . $pointRelais['relay_id'] . '</div>
+				</div>
+			</label>
 		';
-		$html .= '<div id="relaydetail' . $offset . '" style="display:none;font-size: 11px;line-height:0px; height:150px;">
-		<div class="dpdrelaisboxhoraires" style="font-size: 10px;line-height:0px;">	
-				<p><strong>Horaires d\'ouverture : </strong></p>
-				<p>Lundi:    ' . $pointRelais['opening_hours']['monday'] . '</p>
-				<p>Mardi:    ' . $pointRelais['opening_hours']['tuesday'] . '</p>
-				<p>Mercredi: ' . $pointRelais['opening_hours']['wednesday'] . '</p>
-				<p>Jeudi:    ' . $pointRelais['opening_hours']['thursday'] . '</p>
-				<p>Vendredi: ' . $pointRelais['opening_hours']['friday'] . '</p>
-				<p>Samedi:   ' . $pointRelais['opening_hours']['saturday'] . '</p>
-				<p>Dimanche: ' . $pointRelais['opening_hours']['sunday'] . '</p>
-			</div>
-	</div>';
 	}
+	
+	/* Close div */
+	$html .= '</div>';
 
+	/* Display */
 	echo $html;
 	exit;
 }
@@ -58,11 +57,11 @@ if ($run_example == 1)
  */
 if ($run_example == 2)
 {
-	$gsm_destinataire = DPDFrance::validatePredictGSM('0636656565', 'FR');
-	if ($gsm_destinataire == true)
-		echo 'Votre numéro de téléphone est valide.';
+	$gsm_to_test = DPDFrance::validatePredictGSM('0636656565', 'FR');
+	if ($gsm_to_test == true)
+		echo 'Votre numéro de téléphone est valide.'; /* Possible actions on success : display OK message, redirect to payment page ... */
 	else
-		echo 'Merci de renseigner un numéro de téléphone mobile français valide, sur 10 chiffres, commençant par 06 ou 07.';
+		echo 'Merci de renseigner un numéro de téléphone mobile français valide, sur 10 chiffres, commençant par 06 ou 07.'; /* Possible actions on failure : display error message ... */
 }
 	
 	
